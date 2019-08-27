@@ -1,10 +1,14 @@
 import pygame
+from board.chess_board import Board
 
 pygame.init()
 game_display = pygame.display.set_mode((800, 800))
 pygame.display.set_caption("Python Chess")
 clock = pygame.time.Clock()
 
+chess_board = Board()
+chess_board.create_board()
+chess_board.print_board()
 quit_game = False
 
 while not quit_game:
